@@ -176,7 +176,7 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: url('Assets/bg.svg');
+    background-image: url('Assets/bg.webp');
     background-size: cover;
     background-position: center;
     display: flex;
