@@ -354,6 +354,7 @@
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-container">
                 <!-- <div class="contact-info">
+
                     <div class="contact-detail">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -408,7 +409,9 @@
                             
                         </div>
                     </div>
+
                 </div> -->
+              
                 
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
@@ -427,6 +430,21 @@
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
+                    <div class="social-media-section">
+                        <h3 class="social-media-title">Connect With Us</h3>
+                        <div class="social-media-icons">
+                            
+                            <a href="https://www.instagram.com/nyrama.in/" class="social-media-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/nyrama/" class="social-media-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -496,6 +514,29 @@
     </a>
 
     <script>
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Format the message for WhatsApp
+            const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+            
+            // Replace with your WhatsApp Business phone number (with country code, no spaces or symbols)
+            const phoneNumber = "916372866610"; // Change this to your actual number
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+            
+            // Redirect to WhatsApp
+            window.open(whatsappURL, '_blank');
+        });
+
         // Mobile Menu Toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
